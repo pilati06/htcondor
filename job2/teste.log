@@ -1,0 +1,48 @@
+000 (008.000.000) 2026-07-31 10:10:36 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (008.000.000) 2026-07-31 10:10:42 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_1_4188_9323_3>
+...
+040 (008.000.000) 2026-07-31 10:10:42 Finished transferring input files
+...
+001 (008.000.000) 2026-07-31 10:10:43 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_4150_221f>
+	SlotName: slot1_1@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_4757/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+006 (008.000.000) 2026-07-31 10:11:50 Image size of job updated: 403632
+	395  -  MemoryUsage of job (MB)
+	403632  -  ResidentSetSize of job (KB)
+...
+006 (008.000.000) 2026-07-31 10:11:54 Image size of job updated: 407444
+	398  -  MemoryUsage of job (MB)
+	407444  -  ResidentSetSize of job (KB)
+...
+040 (008.000.000) 2026-07-31 10:11:54 Started transferring output files
+...
+040 (008.000.000) 2026-07-31 10:11:54 Finished transferring output files
+...
+005 (008.000.000) 2026-07-31 10:11:54 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:02, Sys 0 00:00:07  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:02, Sys 0 00:00:07  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	77  -  Run Bytes Sent By Job
+	221  -  Run Bytes Received By Job
+	77  -  Total Bytes Sent By Job
+	221  -  Total Bytes Received By Job
+	Partitionable Resources :      Usage  Request Allocated 
+	   Cpus                 :       1.83        1         1 
+	   Disk (KB)            : 1409031     1048576   1048576 
+	   GPUs                 :                             0 
+	   Memory (MB)          :     398        1024      1024 
+	   TimeExecute (s)      :      71                       
+	   TimeSlotBusy (s)     :      72                       
+...
+009 (005.000.000) 2026-08-04 18:52:15 Job was aborted.
+	via condor_rm (by user epilati)
+...

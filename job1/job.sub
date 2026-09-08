@@ -1,0 +1,9 @@
+executable = teste.bat
+arguments  = 
+output     = saida_windows.out
+error      = saida_windows.err
+log        = job_windows.log
+request_cpus   = 1
+request_memory = 512MB
+requirements = (OpSys == "WINDOWS")
+queue

@@ -1,0 +1,8 @@
+=== Iniciando processamento: talhao_002.csv ===
+Registros processados: 7
+Umidade média do solo: 20.17%
+Temperatura máxima: 34.2°C
+Temperatura mínima: 25.8°C
+NDVI médio: 0.659
+ALERTA: Umidade média do solo abaixo do limite ideal (25%).
+=== Processamento concluído com sucesso ===

@@ -1,0 +1,135 @@
+000 (016.001.000) 2026-08-05 19:12:08 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (016.001.000) 2026-08-05 19:12:17 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_2_1629_871b_6>
+...
+040 (016.001.000) 2026-08-05 19:12:17 Finished transferring input files
+...
+001 (016.001.000) 2026-08-05 19:12:18 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_1562_fb05>
+	SlotName: slot1_2@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_4899/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+006 (016.001.000) 2026-08-05 19:12:45 Image size of job updated: 67960
+	67  -  MemoryUsage of job (MB)
+	67960  -  ResidentSetSize of job (KB)
+...
+006 (016.001.000) 2026-08-05 19:12:50 Image size of job updated: 81208
+	80  -  MemoryUsage of job (MB)
+	81208  -  ResidentSetSize of job (KB)
+...
+040 (016.001.000) 2026-08-05 19:12:54 Started transferring output files
+...
+040 (016.001.000) 2026-08-05 19:12:54 Finished transferring output files
+...
+005 (016.001.000) 2026-08-05 19:12:55 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:08, Sys 0 00:00:04  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:08, Sys 0 00:00:04  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	287  -  Run Bytes Sent By Job
+	2451  -  Run Bytes Received By Job
+	287  -  Total Bytes Sent By Job
+	2451  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.78        1         1 
+	   Disk (KB)            : 351532     1048576   1048576 
+	   GPUs                 :                            0 
+	   Memory (MB)          :     80        1024      1024 
+	   TimeExecute (s)      :     36                       
+	   TimeSlotBusy (s)     :     37                       
+...
+000 (017.001.000) 2026-08-05 19:12:57 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+000 (018.001.000) 2026-08-05 19:12:59 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (017.001.000) 2026-08-05 19:13:02 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_2_1629_871b_8>
+...
+040 (017.001.000) 2026-08-05 19:13:02 Finished transferring input files
+...
+001 (017.001.000) 2026-08-05 19:13:03 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_1562_fb05>
+	SlotName: slot1_2@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_5543/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+040 (018.001.000) 2026-08-05 19:13:27 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_1_1629_871b_11>
+...
+040 (018.001.000) 2026-08-05 19:13:27 Finished transferring input files
+...
+001 (018.001.000) 2026-08-05 19:13:28 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_1562_fb05>
+	SlotName: slot1_1@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_6014/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+006 (017.001.000) 2026-08-05 19:13:31 Image size of job updated: 54016
+	53  -  MemoryUsage of job (MB)
+	54016  -  ResidentSetSize of job (KB)
+...
+006 (017.001.000) 2026-08-05 19:13:39 Image size of job updated: 79584
+	78  -  MemoryUsage of job (MB)
+	79584  -  ResidentSetSize of job (KB)
+...
+040 (017.001.000) 2026-08-05 19:13:43 Started transferring output files
+...
+040 (017.001.000) 2026-08-05 19:13:43 Finished transferring output files
+...
+005 (017.001.000) 2026-08-05 19:13:45 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:08, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:08, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	287  -  Run Bytes Sent By Job
+	2451  -  Run Bytes Received By Job
+	287  -  Total Bytes Sent By Job
+	2451  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.75        1         1 
+	   Disk (KB)            : 357042     1048576   1048576 
+	   GPUs                 :                            0 
+	   Memory (MB)          :     78        1024      1024 
+	   TimeExecute (s)      :     39                       
+	   TimeSlotBusy (s)     :     42                       
+...
+006 (018.001.000) 2026-08-05 19:13:52 Image size of job updated: 68964
+	68  -  MemoryUsage of job (MB)
+	68964  -  ResidentSetSize of job (KB)
+...
+006 (018.001.000) 2026-08-05 19:13:58 Image size of job updated: 80628
+	79  -  MemoryUsage of job (MB)
+	80628  -  ResidentSetSize of job (KB)
+...
+040 (018.001.000) 2026-08-05 19:14:01 Started transferring output files
+...
+040 (018.001.000) 2026-08-05 19:14:01 Finished transferring output files
+...
+005 (018.001.000) 2026-08-05 19:14:01 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:08, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:08, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	287  -  Run Bytes Sent By Job
+	2451  -  Run Bytes Received By Job
+	287  -  Total Bytes Sent By Job
+	2451  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.06        1         1 
+	   Disk (KB)            : 356454     1048576   1048576 
+	   GPUs                 :                            0 
+	   Memory (MB)          :     79        1024      1024 
+	   TimeExecute (s)      :     33                       
+	   TimeSlotBusy (s)     :     34                       
+...

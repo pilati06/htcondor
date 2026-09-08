@@ -1,0 +1,115 @@
+000 (016.000.000) 2026-08-05 19:12:08 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (016.000.000) 2026-08-05 19:12:17 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_1_1629_871b_4>
+...
+040 (016.000.000) 2026-08-05 19:12:17 Finished transferring input files
+...
+001 (016.000.000) 2026-08-05 19:12:18 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_1562_fb05>
+	SlotName: slot1_1@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_4897/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+006 (016.000.000) 2026-08-05 19:12:47 Image size of job updated: 139284
+	137  -  MemoryUsage of job (MB)
+	139284  -  ResidentSetSize of job (KB)
+...
+000 (017.000.000) 2026-08-05 19:12:57 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+000 (018.000.000) 2026-08-05 19:12:59 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (016.000.000) 2026-08-05 19:13:01 Started transferring output files
+...
+040 (016.000.000) 2026-08-05 19:13:01 Finished transferring output files
+...
+005 (016.000.000) 2026-08-05 19:13:01 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:09, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:09, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	226  -  Run Bytes Sent By Job
+	2451  -  Run Bytes Received By Job
+	226  -  Total Bytes Sent By Job
+	2451  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated 
+	   Cpus                 :      0.85        1         1 
+	   Disk (KB)            : 352790     1048576   1048576 
+	   GPUs                 :                            0 
+	   Memory (MB)          :    137        1024      1024 
+	   TimeExecute (s)      :     43                       
+	   TimeSlotBusy (s)     :     44                       
+...
+040 (017.000.000) 2026-08-05 19:13:01 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_1_1629_871b_7>
+...
+040 (017.000.000) 2026-08-05 19:13:01 Finished transferring input files
+...
+001 (017.000.000) 2026-08-05 19:13:02 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_1562_fb05>
+	SlotName: slot1_1@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_5530/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+040 (018.000.000) 2026-08-05 19:13:02 Started transferring input files
+	Transferring to host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=slot1_4_1629_871b_10>
+...
+040 (018.000.000) 2026-08-05 19:13:02 Finished transferring input files
+...
+001 (018.000.000) 2026-08-05 19:13:03 Job executing on host: <10.90.67.131:9618?addrs=10.90.67.131-9618&alias=node01&noUDP&sock=startd_1562_fb05>
+	SlotName: slot1_4@node01
+	CondorScratchDir = "/var/lib/condor/execute/dir_5547/scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 1024
+...
+006 (017.000.000) 2026-08-05 19:13:26 Image size of job updated: 4320
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+004 (017.000.000) 2026-08-05 19:13:26 Job was evicted. Code 1023 Subcode 0
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	2451  -  Run Bytes Received By Job
+	Reason: via condor_rm (by user epilati)
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.50        1         1 
+	   Disk (KB)            : 87055     1048576   1048576 
+	   GPUs                 :                           0 
+	   Memory (MB)          :     0        1024      1024 
+	   TimeExecute (s)      :    24                       
+	   TimeSlotBusy (s)     :    25                       
+...
+009 (017.000.000) 2026-08-05 19:13:26 Job was aborted.
+	via condor_rm (by user epilati)
+...
+006 (018.000.000) 2026-08-05 19:13:27 Image size of job updated: 1
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+004 (018.000.000) 2026-08-05 19:13:27 Job was evicted. Code 1023 Subcode 0
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	2451  -  Run Bytes Received By Job
+	Reason: via condor_rm (by user epilati)
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.60        1         1 
+	   Disk (KB)            : 87055     1048576   1048576 
+	   GPUs                 :                           0 
+	   Memory (MB)          :     0        1024      1024 
+	   TimeExecute (s)      :    24                       
+	   TimeSlotBusy (s)     :    25                       
+...
+009 (018.000.000) 2026-08-05 19:13:27 Job was aborted.
+	via condor_rm (by user epilati)
+...

@@ -1,0 +1,17 @@
+universe       = container
+container_image = docker://python:3.10
+
+executable      = run.sh
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = teste.py
+
+output = teste.out
+error  = teste.err
+log    = teste.log
+
+request_cpus   = 1
+request_memory = 1GB
+request_disk   = 1GB
+
+queue

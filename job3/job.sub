@@ -1,0 +1,13 @@
+executable = run.bat
+arguments  = teste.py
+transfer_input_files = teste.py, run.bat
+output     = saida_windows.out
+error      = saida_windows.err
+log        = job_windows.log
+
+requirements = (OpSys == "WINDOWS")
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+queue

@@ -1,0 +1,42 @@
+000 (004.000.000) 2026-07-29 17:48:52 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (004.000.000) 2026-07-29 17:49:01 Started transferring input files
+	Transferring to host: <10.90.67.201:9618?addrs=10.90.67.201-9618&alias=DESKTOP-MOQMNFK&noUDP&sock=slot1_1_23364_545e_4>
+...
+040 (004.000.000) 2026-07-29 17:49:01 Finished transferring input files
+...
+001 (004.000.000) 2026-07-29 17:49:02 Job executing on host: <10.90.67.201:9618?addrs=10.90.67.201-9618&alias=DESKTOP-MOQMNFK&noUDP&sock=startd_12624_ee9c>
+	SlotName: slot1_1@DESKTOP-MOQMNFK
+	AvailableGPUs = {  }
+	CondorScratchDir = "C:\condor\execute\dir_21088\scratch"
+	Cpus = 1
+	Disk = 1048576
+	GPUs = 0
+	Memory = 512
+...
+006 (004.000.000) 2026-07-29 17:49:02 Image size of job updated: 1
+	3  -  MemoryUsage of job (MB)
+	2492  -  ResidentSetSize of job (KB)
+...
+040 (004.000.000) 2026-07-29 17:49:02 Started transferring output files
+...
+040 (004.000.000) 2026-07-29 17:49:02 Finished transferring output files
+...
+005 (004.000.000) 2026-07-29 17:49:02 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	119  -  Run Bytes Sent By Job
+	135  -  Run Bytes Received By Job
+	119  -  Total Bytes Sent By Job
+	135  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :       15  1048576   1048576 
+	   GPUs                 :                           0 
+	   Memory (MB)          :        3      512       512 
+	   TimeExecute (s)      :        0                    
+	   TimeSlotBusy (s)     :        1                    
+...
