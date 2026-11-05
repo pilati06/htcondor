@@ -158,28 +158,37 @@ Data: 04/08/2026 18:55:50,88
 nvidia-smi nao encontrado
 ```
 
-Isso corresponde à execução da versão **Windows** (`gpu_check.bat`), na máquina `DESKTOP-MOQMNFK`. Repare numa contradição: o log mostra que o HTCondor **detectou e alocou** a `GPU0`, e essa detecção (feita pelo `condor_gpu_discovery`) só funciona quando o driver NVIDIA está instalado. Então a GPU e o driver existem. O problema é outro: **o ambiente do job**.
+Isso corresponde à execução da versão **Windows** (`gpu_check.bat`), na máquina `DESKTOP-MOQMNFK`. Repare numa aparente contradição: o log mostra que o HTCondor **detectou e alocou** a `GPU0`, mas o script não achou o `nvidia-smi`.
 
-No Windows, o HTCondor não repassa ao job o ambiente completo do sistema. O job roda como o usuário temporário `condor-slot1_1`, com um conjunto mínimo de variáveis, e o `PATH` pode não conter `C:\Windows\System32` (onde os drivers atuais instalam o `nvidia-smi.exe`) nem `C:\Program Files\NVIDIA Corporation\NVSMI` (onde ficava nos drivers antigos). Sem isso, `where nvidia-smi` falha (e, se o System32 estiver fora do PATH, o próprio `where` nem é encontrado), e o script imprime "nvidia-smi nao encontrado".
+A explicação é que a placa desta máquina **não é NVIDIA**. O `nvidia-smi` é uma ferramenta do driver NVIDIA e só existe em máquinas com placa NVIDIA. Já o detector do HTCondor (`condor_gpu_discovery`) também reconhece placas por OpenCL, que AMD e Intel suportam. Então a reserva da GPU funcionou. O que não funciona é um script que só sabe conversar com NVIDIA.
 
-### Como corrigir
+### O script agora serve para qualquer fabricante
 
-Há três camadas de correção, e este repositório aplica as três:
+O `gpu_check.bat` passou a:
+- mostrar as variáveis que o HTCondor define para o job com a GPU reservada (`_CONDOR_AssignedGPUs`, `CUDA_VISIBLE_DEVICES`, `GPU_DEVICE_ORDINAL`);
+- listar as placas de vídeo pelo PowerShell (`Win32_VideoController`), mostrando nome, fabricante e versão do driver;
+- rodar o `nvidia-smi` só se ele existir, e explicar a ausência quando não existir.
 
-1. **No script** (`gpu_check.bat`): procurar o `nvidia-smi.exe` pelos caminhos conhecidos (System32, NVSMI e DriverStore) antes de depender do `PATH`, e imprimir o `PATH` e o `CUDA_VISIBLE_DEVICES` do job para diagnóstico. O script agora termina com código 1 quando não acha o `nvidia-smi`, então a falha aparece no log em vez de passar como sucesso.
-2. **No submit file** (`job_windows.sub`): definir o `PATH` do job com `environment = "PATH='C:\Windows\System32;...;C:\Program Files\NVIDIA Corporation\NVSMI'"`. Não adianta usar `getenv`, porque ele copiaria o ambiente da máquina que submete (o servidor Linux), não o do Windows.
-3. **Na configuração da máquina de execução** (`config/99-gpu.config`): copie para `C:\condor\config\` e rode `condor_reconfig` como Administrador. O `STARTER_JOB_ENVIRONMENT` define um `PATH` padrão para **todos** os jobs daquela máquina, e `use feature : GPUs` deixa a detecção de GPU explícita.
+Os caminhos dos programas estão completos (`C:\Windows\System32\...`) porque o job no Windows roda como o usuário temporário `condor-slot1_1`, com um ambiente mínimo.
 
-Para conferir o que o HTCondor enxerga na máquina, rode no Windows (como Administrador):
+Para conferir o que o HTCondor enxerga na máquina, rode no Windows:
 
 ```
-C:\condor\bin\condor_gpu_discovery.exe -properties
+C:\condor\bin\condor_gpu_discovery.exe -properties -opencl
 condor_status -l DESKTOP-MOQMNFK | findstr /i gpu
 ```
 
+### Como usar uma GPU que não é NVIDIA
+
+CUDA é exclusivo da NVIDIA. Com AMD ou Intel, o código do job precisa usar outra tecnologia:
+- **OpenCL**: funciona com AMD, Intel e NVIDIA (por exemplo, `pyopencl`).
+- **DirectML** (só Windows e WSL2, qualquer fabricante): `torch-directml` ou `onnxruntime-directml` para aprendizado de máquina.
+- **AMD**: HIP SDK/ROCm, suportado só em algumas Radeon.
+- **Intel**: oneAPI ou OpenVINO.
+
 ### E a VM Linux?
 
-A VM Linux roda no VirtualBox, que **não repassa a GPU** para a VM quando o hospedeiro é Windows (não existe PCI passthrough nesse cenário). Por isso o `job.sub` (versão Linux) agora exige `OpSys == "LINUX"` e, com `request_gpus = 1`, ficará na fila sem casar com nenhuma máquina até existir um nó Linux com GPU. Se você precisar rodar código CUDA em Linux nesta mesma máquina, a alternativa é o **WSL2**, que usa o driver do Windows e expõe a GPU dentro do Linux (o `nvidia-smi` fica em `/usr/lib/wsl/lib`). Nesse caso, desligue a GPU no startd do Windows (`use feature : GPUs` removido e `STARTD_DETECT_GPUS = false`) ou no do WSL2, para que a mesma GPU não seja oferecida duas vezes ao pool.
+A VM Linux roda no VirtualBox, que **não repassa a GPU** para a VM quando o hospedeiro é Windows. Por isso o `job.sub` (versão Linux) agora exige `OpSys == "LINUX"` e, com `request_gpus = 1`, ficará na fila até existir um nó Linux com GPU. Para usar a GPU a partir de Linux nesta mesma máquina, a alternativa é o **WSL2** (DirectML com qualquer fabricante, ou ROCm em algumas Radeon). Nesse caso, desligue a detecção de GPU em um dos dois startd (Windows ou WSL2), para que a mesma placa não seja oferecida duas vezes ao pool.
 
 `gpu_12_0.err` está vazio, sem erros.
 

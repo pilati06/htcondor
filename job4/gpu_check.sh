@@ -12,3 +12,6 @@ if command -v nvidia-smi >/dev/null 2>&1; then
 else
     echo "nvidia-smi não encontrado (esperado se não houver GPU NVIDIA)"
 fi
+
+# Placas de qualquer fabricante
+command -v lspci >/dev/null 2>&1 && lspci | grep -i -E "vga|3d|display"

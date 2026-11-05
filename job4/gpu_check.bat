@@ -4,13 +4,19 @@ echo === Verificacao de GPU ===
 echo Hostname: %COMPUTERNAME%
 echo Data: %DATE% %TIME%
 echo Usuario: %USERNAME%
+echo.
+echo --- GPU reservada pelo HTCondor ---
+echo _CONDOR_AssignedGPUs = %_CONDOR_AssignedGPUs%
 echo CUDA_VISIBLE_DEVICES = %CUDA_VISIBLE_DEVICES%
-echo PATH = %PATH%
+echo GPU_DEVICE_ORDINAL   = %GPU_DEVICE_ORDINAL%
 echo.
 
-rem O HTCondor monta um ambiente minimo para o job: o PATH do servico
-rem pode nao conter as pastas do driver NVIDIA. Por isso procuramos o
-rem nvidia-smi.exe pelos caminhos conhecidos, e so depois pelo PATH.
+rem Lista as placas de video de qualquer fabricante (NVIDIA, AMD, Intel).
+rem Caminho completo do PowerShell, porque o PATH do job pode ser minimo.
+echo --- Placas de video desta maquina ---
+"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -Command "Get-CimInstance Win32_VideoController | Format-List Name,AdapterCompatibility,DriverVersion,AdapterRAM"
+
+rem nvidia-smi so existe com placa e driver NVIDIA.
 set "NVSMI="
 for %%P in (
     "C:\Windows\System32\nvidia-smi.exe"
@@ -19,28 +25,11 @@ for %%P in (
     if not defined NVSMI if exist %%P set "NVSMI=%%~P"
 )
 
-rem Drivers DCH tambem guardam o nvidia-smi no DriverStore
-if not defined NVSMI (
-    for /d %%D in ("C:\Windows\System32\DriverStore\FileRepository\nv*") do (
-        if not defined NVSMI if exist "%%D\nvidia-smi.exe" set "NVSMI=%%D\nvidia-smi.exe"
-    )
-)
-
-rem Por ultimo, o PATH do job (where.exe chamado pelo caminho completo,
-rem porque o proprio System32 pode estar fora do PATH)
-if not defined NVSMI (
-    for /f "delims=" %%F in ('C:\Windows\System32\where.exe nvidia-smi 2^>nul') do (
-        if not defined NVSMI set "NVSMI=%%F"
-    )
-)
-
+echo --- NVIDIA ---
 if defined NVSMI (
-    echo nvidia-smi encontrado em: !NVSMI!
-    echo.
     "!NVSMI!"
-    exit /b !ERRORLEVEL!
 ) else (
-    echo nvidia-smi nao encontrado
-    echo Verifique se o driver NVIDIA esta instalado nesta maquina.
-    exit /b 1
+    echo nvidia-smi nao encontrado: a placa nao e NVIDIA ou o driver NVIDIA nao esta instalado.
+    echo Placas AMD/Intel nao usam nvidia-smi nem CUDA. Use OpenCL, DirectML ou oneAPI.
 )
+exit /b 0
