@@ -1,4 +1,6 @@
 executable   = gpu_check.sh
+# Este script e bash: so pode rodar em maquina Linux com GPU.
+requirements = (OpSys == "LINUX")
 output       = gpu.$(Cluster).$(Process).out
 error        = gpu.$(Cluster).$(Process).err
 log          = gpu.$(Cluster).log

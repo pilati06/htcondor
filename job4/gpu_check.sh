@@ -4,6 +4,9 @@ echo "Hostname: $(hostname)"
 echo "Data: $(date)"
 echo "CUDA_VISIBLE_DEVICES = $CUDA_VISIBLE_DEVICES"
 
+# No WSL2 o nvidia-smi fica em /usr/lib/wsl/lib, que nem sempre esta no PATH
+export PATH="$PATH:/usr/lib/wsl/lib"
+
 if command -v nvidia-smi >/dev/null 2>&1; then
     nvidia-smi
 else
