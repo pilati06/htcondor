@@ -1,0 +1,18 @@
+# Job 6a: confirma que o Python 3.12 + pip + venv funcionam no slot Windows
+executable   = check_python.bat
+requirements = (OpSys == "WINDOWS") && (HAS_PYTHON312 =?= True)
+# Para testar especificamente o lab1-desktop-23, troque a linha acima por:
+# requirements = (OpSys == "WINDOWS") && (Machine == "lab1-desktop-23")
+
+request_cpus   = 1
+request_memory = 1GB
+request_disk   = 1GB
+
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+
+output = check_python.$(Cluster).$(Process).out
+error  = check_python.$(Cluster).$(Process).err
+log    = check_python.$(Cluster).log
+
+queue
