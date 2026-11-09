@@ -8,6 +8,7 @@ package-mode = false
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
 torch = { version = "*", source = "pytorch-cu126" }
+numpy = "*"
 
 # Wheels do torch com CUDA 12.6 (a maquina tem GPU NVIDIA, ver job4).
 # Para a versao so CPU, troque a url por https://download.pytorch.org/whl/cpu
