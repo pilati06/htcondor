@@ -1,0 +1,298 @@
+=== [1] Python ===
+Python 3.12.10
+=== [2] venv do Poetry ===
+Looking in links: d:\condor\execute\dir_17452\scratch\tmpxui2k_nw
+Processing d:\condor\execute\dir_17452\scratch\tmpxui2k_nw\pip-25.0.1-py3-none-any.whl
+Installing collected packages: pip
+Successfully installed pip-25.0.1
+venv pronto: D:\condor\execute\dir_17452\scratch\poetry-env\Scripts\python.exe
+=== [3] pip install poetry ===
+Requirement already satisfied: pip in d:\condor\execute\dir_17452\scratch\poetry-env\lib\site-packages (25.0.1)
+Collecting pip
+  Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting poetry
+  Downloading poetry-2.5.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting build<2.0.0,>=1.2.1 (from poetry)
+  Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting cachecontrol<0.15.0,>=0.14.0 (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry)
+  Downloading cachecontrol-0.14.4-py3-none-any.whl.metadata (3.1 kB)
+Collecting cleo<3.0.0,>=2.1.0 (from poetry)
+  Downloading cleo-2.1.0-py3-none-any.whl.metadata (12 kB)
+Collecting dulwich<2,>=0.25.0 (from poetry)
+  Downloading dulwich-1.2.21-cp312-cp312-win_amd64.whl.metadata (6.4 kB)
+Collecting fastjsonschema<3.0.0,>=2.18.0 (from poetry)
+  Downloading fastjsonschema-2.22.3-py3-none-any.whl.metadata (2.1 kB)
+Collecting findpython<0.9.0,>=0.6.2 (from poetry)
+  Downloading findpython-0.8.0-py3-none-any.whl.metadata (5.4 kB)
+Collecting installer<2.0.0,>=0.7.0 (from poetry)
+  Downloading installer-1.1.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting keyring<26.0.0,>=25.1.0 (from poetry)
+  Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+Collecting packaging>=24.2 (from poetry)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pbs-installer>=2025.6.10 (from pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading pbs_installer-2026.10.25-py3-none-any.whl.metadata (1.2 kB)
+Collecting pkginfo<2.0,>=1.12 (from poetry)
+  Downloading pkginfo-1.13.3-py3-none-any.whl.metadata (14 kB)
+Collecting platformdirs<5,>=3.0.0 (from poetry)
+  Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+Collecting poetry-core==2.5.0 (from poetry)
+  Downloading poetry_core-2.5.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting pyproject-hooks<2.0.0,>=1.0.0 (from poetry)
+  Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+Collecting requests<3.0,>=2.26 (from poetry)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting requests-toolbelt<2.0.0,>=1.0.0 (from poetry)
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting shellingham<2.0,>=1.5 (from poetry)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting tomlkit<1.0.0,>=0.11.4 (from poetry)
+  Downloading tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting trove-classifiers>=2022.5.19 (from poetry)
+  Downloading trove_classifiers-2026.9.21.13-py3-none-any.whl.metadata (2.4 kB)
+Collecting virtualenv>=20.26.6 (from poetry)
+  Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+Collecting colorama (from build<2.0.0,>=1.2.1->poetry)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting msgpack<2.0.0,>=0.5.2 (from cachecontrol<0.15.0,>=0.14.0->cachecontrol[filecache]<0.15.0,>=0.14.0->poetry)
+  Downloading msgpack-1.2.4-cp312-cp312-win_amd64.whl.metadata (8.5 kB)
+Collecting filelock>=3.8.0 (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry)
+  Downloading filelock-4.2.9-py3-none-any.whl.metadata (2.3 kB)
+Collecting crashtest<0.5.0,>=0.4.1 (from cleo<3.0.0,>=2.1.0->poetry)
+  Downloading crashtest-0.4.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting rapidfuzz<4.0.0,>=3.0.0 (from cleo<3.0.0,>=2.1.0->poetry)
+  Downloading rapidfuzz-3.14.6-cp312-cp312-win_amd64.whl.metadata (12 kB)
+Collecting urllib3>=2.2.2 (from dulwich<2,>=0.25.0->poetry)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pywin32-ctypes>=0.2.0 (from keyring<26.0.0,>=25.1.0->poetry)
+  Downloading pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting jaraco.classes (from keyring<26.0.0,>=25.1.0->poetry)
+  Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting jaraco.functools (from keyring<26.0.0,>=25.1.0->poetry)
+  Downloading jaraco_functools-4.6.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting jaraco.context (from keyring<26.0.0,>=25.1.0->poetry)
+  Downloading jaraco_context-6.1.2-py3-none-any.whl.metadata (4.2 kB)
+Collecting httpx2<3,>=2.14.0 (from pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading httpx2-2.16.0-py3-none-any.whl.metadata (10 kB)
+Collecting backports.zstd>=1.0.0 (from pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading backports_zstd-1.8.0-cp312-cp312-win_amd64.whl.metadata (7.0 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0,>=2.26->poetry)
+  Downloading charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl.metadata (47 kB)
+Collecting idna<4,>=2.5 (from requests<3.0,>=2.26->poetry)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting certifi>=2023.5.7 (from requests<3.0,>=2.26->poetry)
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting distlib<1,>=0.4.3 (from virtualenv>=20.26.6->poetry)
+  Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+Collecting python-discovery>=1.6.1 (from virtualenv>=20.26.6->poetry)
+  Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+Collecting anyio>=4.10 (from httpx2<3,>=2.14.0->pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting httpcore2==2.16.0 (from httpx2<3,>=2.14.0->pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading httpcore2-2.16.0-py3-none-any.whl.metadata (27 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2.14.0->pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting typing-extensions>=4.5.0 (from httpx2<3,>=2.14.0->pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting h11>=0.16 (from httpcore2==2.16.0->httpx2<3,>=2.14.0->pbs-installer[download,install]>=2025.6.10->poetry)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting more-itertools (from jaraco.classes->keyring<26.0.0,>=25.1.0->poetry)
+  Downloading more_itertools-11.2.1-py3-none-any.whl.metadata (42 kB)
+Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+   ---------------------------------------- 2.0/2.0 MB 6.8 MB/s eta 0:00:00
+Downloading poetry-2.5.1-py3-none-any.whl (307 kB)
+Downloading poetry_core-2.5.0-py3-none-any.whl (413 kB)
+Downloading build-1.6.1-py3-none-any.whl (31 kB)
+Downloading cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+Downloading cleo-2.1.0-py3-none-any.whl (78 kB)
+Downloading dulwich-1.2.21-cp312-cp312-win_amd64.whl (1.1 MB)
+   ---------------------------------------- 1.1/1.1 MB 11.1 MB/s eta 0:00:00
+Downloading fastjsonschema-2.22.3-py3-none-any.whl (28 kB)
+Downloading findpython-0.8.0-py3-none-any.whl (21 kB)
+Downloading installer-1.1.0-py3-none-any.whl (464 kB)
+Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pbs_installer-2026.10.25-py3-none-any.whl (109 kB)
+Downloading pkginfo-1.13.3-py3-none-any.whl (35 kB)
+Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading tomlkit-0.15.2-py3-none-any.whl (52 kB)
+Downloading trove_classifiers-2026.9.21.13-py3-none-any.whl (14 kB)
+Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+   ---------------------------------------- 5.7/5.7 MB 26.7 MB/s eta 0:00:00
+Downloading backports_zstd-1.8.0-cp312-cp312-win_amd64.whl (330 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Downloading charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl (207 kB)
+Downloading crashtest-0.4.1-py3-none-any.whl (7.6 kB)
+Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+Downloading filelock-4.2.9-py3-none-any.whl (164 kB)
+Downloading httpx2-2.16.0-py3-none-any.whl (97 kB)
+Downloading httpcore2-2.16.0-py3-none-any.whl (85 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading msgpack-1.2.4-cp312-cp312-win_amd64.whl (77 kB)
+Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+Downloading pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+Downloading rapidfuzz-3.14.6-cp312-cp312-win_amd64.whl (1.7 MB)
+   ---------------------------------------- 1.7/1.7 MB 18.8 MB/s eta 0:00:00
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+Downloading jaraco_functools-4.6.0-py3-none-any.whl (11 kB)
+Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading more_itertools-11.2.1-py3-none-any.whl (74 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Installing collected packages: trove-classifiers, distlib, urllib3, typing-extensions, truststore, tomlkit, shellingham, rapidfuzz, pywin32-ctypes, pyproject-hooks, poetry-core, platformdirs, pkginfo, pip, pbs-installer, packaging, msgpack, more-itertools, jaraco.context, installer, idna, h11, filelock, fastjsonschema, crashtest, colorama, charset_normalizer, certifi, backports.zstd, requests, python-discovery, jaraco.functools, jaraco.classes, httpcore2, findpython, dulwich, cleo, build, anyio, virtualenv, requests-toolbelt, keyring, httpx2, cachecontrol, poetry
+  Attempting uninstall: pip
+    Found existing installation: pip 25.0.1
+    Uninstalling pip-25.0.1:
+      Successfully uninstalled pip-25.0.1
+Successfully installed anyio-4.16.0 backports.zstd-1.8.0 build-1.6.1 cachecontrol-0.14.4 certifi-2026.10.23 charset_normalizer-3.5.2 cleo-2.1.0 colorama-0.4.6 crashtest-0.4.1 distlib-0.4.4 dulwich-1.2.21 fastjsonschema-2.22.3 filelock-4.2.9 findpython-0.8.0 h11-0.16.0 httpcore2-2.16.0 httpx2-2.16.0 idna-3.20 installer-1.1.0 jaraco.classes-3.4.0 jaraco.context-6.1.2 jaraco.functools-4.6.0 keyring-25.7.0 more-itertools-11.2.1 msgpack-1.2.4 packaging-26.3 pbs-installer-2026.10.25 pip-26.3 pkginfo-1.13.3 platformdirs-4.14.5 poetry-2.5.1 poetry-core-2.5.0 pyproject-hooks-1.3.3 python-discovery-1.9.5 pywin32-ctypes-0.2.3 rapidfuzz-3.14.6 requests-2.34.2 requests-toolbelt-1.0.0 shellingham-1.5.4 tomlkit-0.15.2 trove-classifiers-2026.9.21.13 truststore-0.10.5 typing-extensions-4.16.0 urllib3-2.8.0 virtualenv-21.15.6
+Poetry (version 2.5.1)
+=== [4] venv do projeto ===
+Looking in links: d:\condor\execute\dir_17452\scratch\tmpi33wqku6
+Processing d:\condor\execute\dir_17452\scratch\tmpi33wqku6\pip-25.0.1-py3-none-any.whl
+Installing collected packages: pip
+Successfully installed pip-25.0.1
+venv pronto: D:\condor\execute\dir_17452\scratch\.venv\Scripts\python.exe
+=== [5] poetry install (torch) ===
+Checking keyring availability: Unavailable
+Updating dependencies
+Resolving dependencies...
+   1: fact: teste-torch is 0.1.0
+   1: derived: teste-torch
+   1: fact: teste-torch depends on torch (*)
+   1: selecting teste-torch (0.1.0)
+   1: derived: torch
+   1: fact: torch (2.14.1+cu126) depends on filelock (*)
+   1: fact: torch (2.14.1+cu126) depends on typing-extensions (>=4.10.0)
+   1: fact: torch (2.14.1+cu126) depends on setuptools (>=77.0.3)
+   1: fact: torch (2.14.1+cu126) depends on sympy (>=1.13.3)
+   1: fact: torch (2.14.1+cu126) depends on networkx (>=2.5.1)
+   1: fact: torch (2.14.1+cu126) depends on jinja2 (*)
+   1: fact: torch (2.14.1+cu126) depends on fsspec (>=0.8.5)
+   1: fact: torch (2.14.1+cu126) depends on cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3)
+   1: fact: torch (2.14.1+cu126) depends on cuda-bindings (>=12.9.4,<13)
+   1: fact: torch (2.14.1+cu126) depends on nvidia-cudnn-cu12 (9.10.2.21)
+   1: fact: torch (2.14.1+cu126) depends on nvidia-cusparselt-cu12 (0.7.1)
+   1: fact: torch (2.14.1+cu126) depends on nvidia-nccl-cu12 (2.29.3)
+   1: fact: torch (2.14.1+cu126) depends on nvidia-nvshmem-cu12 (3.4.5)
+   1: fact: torch (2.14.1+cu126) depends on nvidia-nvjitlink-cu12 (>=12.6.85,<13)
+   1: fact: torch (2.14.1+cu126) depends on triton (>=3.8.0,<3.9.0)
+   1: selecting torch (2.14.1+cu126)
+   1: derived: triton (>=3.8.0,<3.9.0)
+   1: derived: nvidia-nvjitlink-cu12 (>=12.6.85,<13)
+   1: derived: nvidia-nvshmem-cu12 (==3.4.5)
+   1: derived: nvidia-nccl-cu12 (==2.29.3)
+   1: derived: nvidia-cusparselt-cu12 (==0.7.1)
+   1: derived: nvidia-cudnn-cu12 (==9.10.2.21)
+   1: derived: cuda-bindings (>=12.9.4,<13)
+   1: derived: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (==12.6.3)
+   1: derived: fsspec (>=0.8.5)
+   1: derived: jinja2
+   1: derived: networkx (>=2.5.1)
+   1: derived: sympy (>=1.13.3)
+   1: derived: setuptools (>=77.0.3)
+   1: derived: typing-extensions (>=4.10.0)
+   1: derived: filelock
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on cuda-toolkit (12.6.3)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cublas-cu12 (==12.6.4.1.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cuda-runtime-cu12 (==12.6.77.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cufft-cu12 (==11.3.0.4.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cufile-cu12 (==1.11.1.6.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cuda-cupti-cu12 (==12.6.80.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-curand-cu12 (==10.3.7.77.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cusolver-cu12 (==11.7.1.2.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cusparse-cu12 (==12.5.4.2.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-cuda-nvrtc-cu12 (==12.6.85.*)
+   1: fact: cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3) depends on nvidia-nvtx-cu12 (==12.6.77.*)
+   1: selecting cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvrtc,nvtx] (12.6.3)
+   1: derived: nvidia-nvtx-cu12 (==12.6.77.*)
+   1: derived: nvidia-cuda-nvrtc-cu12 (==12.6.85.*)
+   1: derived: nvidia-cusparse-cu12 (==12.5.4.2.*)
+   1: derived: nvidia-cusolver-cu12 (==11.7.1.2.*)
+   1: derived: nvidia-curand-cu12 (==10.3.7.77.*)
+   1: derived: nvidia-cuda-cupti-cu12 (==12.6.80.*)
+   1: derived: nvidia-cufile-cu12 (==1.11.1.6.*)
+   1: derived: nvidia-cufft-cu12 (==11.3.0.4.*)
+   1: derived: nvidia-cuda-runtime-cu12 (==12.6.77.*)
+   1: derived: nvidia-cublas-cu12 (==12.6.4.1.*)
+   1: derived: cuda-toolkit (==12.6.3)
+   1: selecting triton (3.8.0)
+   1: fact: nvidia-cudnn-cu12 (9.10.2.21) depends on nvidia-cublas-cu12 (*)
+   1: selecting nvidia-cudnn-cu12 (9.10.2.21)
+   1: derived: nvidia-cublas-cu12
+   1: fact: nvidia-cusparse-cu12 (12.5.4.2) depends on nvidia-nvjitlink-cu12 (*)
+   1: selecting nvidia-cusparse-cu12 (12.5.4.2)
+   1: derived: nvidia-nvjitlink-cu12
+   1: fact: nvidia-cusolver-cu12 (11.7.1.2) depends on nvidia-cublas-cu12 (*)
+   1: fact: nvidia-cusolver-cu12 (11.7.1.2) depends on nvidia-nvjitlink-cu12 (*)
+   1: fact: nvidia-cusolver-cu12 (11.7.1.2) depends on nvidia-cusparse-cu12 (*)
+   1: selecting nvidia-cusolver-cu12 (11.7.1.2)
+   1: derived: nvidia-cusparse-cu12
+   1: derived: nvidia-nvjitlink-cu12
+   1: derived: nvidia-cublas-cu12
+   1: fact: nvidia-cufft-cu12 (11.3.0.4) depends on nvidia-nvjitlink-cu12 (*)
+   1: selecting nvidia-cufft-cu12 (11.3.0.4)
+   1: derived: nvidia-nvjitlink-cu12
+   1: selecting nvidia-nvshmem-cu12 (3.4.5)
+   1: selecting nvidia-nccl-cu12 (2.29.3)
+   1: selecting nvidia-cusparselt-cu12 (0.7.1)
+   1: selecting nvidia-nvtx-cu12 (12.6.77)
+   1: selecting nvidia-cuda-nvrtc-cu12 (12.6.85)
+   1: selecting nvidia-curand-cu12 (10.3.7.77)
+   1: selecting nvidia-cuda-cupti-cu12 (12.6.80)
+   1: selecting nvidia-cufile-cu12 (1.11.1.6)
+   1: selecting nvidia-cuda-runtime-cu12 (12.6.77)
+   1: selecting nvidia-cublas-cu12 (12.6.4.1)
+   1: selecting cuda-toolkit (12.6.3)
+   1: fact: cuda-bindings (12.9.10) depends on cuda-pathfinder (>=1.1,<2.0)
+   1: selecting cuda-bindings (12.9.10)
+   1: derived: cuda-pathfinder (>=1.1,<2.0)
+   1: fact: sympy (1.14.0) depends on mpmath (>=1.1.0,<1.4)
+   1: selecting sympy (1.14.0)
+   1: derived: mpmath (>=1.1.0,<1.4)
+   1: fact: jinja2 (3.1.6) depends on MarkupSafe (>=2.0)
+   1: selecting jinja2 (3.1.6)
+   1: derived: MarkupSafe (>=2.0)
+   1: selecting filelock (4.2.9)
+   1: selecting fsspec (2026.9.0)
+   1: selecting cuda-pathfinder (1.8.6)
+   1: selecting setuptools (84.2.1)
+   1: selecting networkx (3.7)
+   1: selecting markupsafe (3.0.4)
+   1: selecting typing-extensions (4.16.0)
+   1: selecting nvidia-nvjitlink-cu12 (12.9.86)
+   1: selecting mpmath (1.3.0)
+   1: Version solving took 5.431 seconds.
+   1: Tried 1 solutions.
+
+Finding the necessary packages for the current system
+
+Package operations: 10 installs, 0 updates, 0 removals
+
+  - Installing markupsafe (3.0.4)
+  - Installing mpmath (1.3.0)
+  - Installing filelock (4.2.9)
+  - Installing fsspec (2026.9.0)
+  - Installing jinja2 (3.1.6)
+  - Installing networkx (3.7)
+  - Installing setuptools (84.2.1)
+  - Installing sympy (1.14.0)
+  - Installing typing-extensions (4.16.0)
+  - Installing torch (2.14.1+cu126)
+
+Writing lock file
+=== [6] teste_torch.py ===
+No: lab1-desktop-23
+Sistema: Windows 11
+Python: 3.12.10 (D:\condor\execute\dir_17452\scratch\.venv\Scripts\python.exe)
+torch: 2.14.1+cu126
+CUDA disponivel: True
+GPU: NVIDIA RTX 2000 Ada Generation
+Soma de teste na GPU: 249676896.00

@@ -1,0 +1,47 @@
+000 (038.000.000) 2026-11-09 09:04:09 Job submitted from host: <189.90.67.88:9618?addrs=189.90.67.88-9618&alias=ciaagro&noUDP&sock=schedd_1349360_4db3>
+...
+040 (038.000.000) 2026-11-09 09:04:17 Started transferring input files
+	Transferring to host: <10.90.67.220:9618?addrs=10.90.67.220-9618&alias=lab1-desktop-23&noUDP&sock=slot1_1_5264_8698_6>
+...
+040 (038.000.000) 2026-11-09 09:04:17 Finished transferring input files
+...
+001 (038.000.000) 2026-11-09 09:04:18 Job executing on host: <10.90.67.220:9618?addrs=10.90.67.220-9618&alias=lab1-desktop-23&noUDP&sock=startd_3512_0d6a>
+	SlotName: slot1_1@lab1-desktop-23
+	AvailableGPUs = { GPUs_GPU_7841c211 }
+	CondorScratchDir = "D:\condor\execute\dir_17452\scratch"
+	Cpus = 2
+	Disk = 12582912
+	GPUs = 1
+	GPUs_GPU_7841c211 = [ Id = "GPU-7841c211"; Capability = 8.9; DeviceName = "NVIDIA RTX 2000 Ada Generation"; DeviceUuid = "7841c211-5a90-e598-2621-c6d2e4bba89b"; ECCEnabled = false; NvidiaDriver = "596.71"; DriverVersion = 13.2; DevicePciBusId = "0000:01:00.0"; GlobalMemoryMb = 16380; MaxSupportedVersion = 13020 ]
+	Memory = 8192
+...
+006 (038.000.000) 2026-11-09 09:04:27 Image size of job updated: 2
+	2  -  MemoryUsage of job (MB)
+	2036  -  ResidentSetSize of job (KB)
+...
+006 (038.000.000) 2026-11-09 09:07:51 Image size of job updated: 2218884
+	137  -  MemoryUsage of job (MB)
+	139280  -  ResidentSetSize of job (KB)
+...
+040 (038.000.000) 2026-11-09 09:07:52 Started transferring output files
+...
+040 (038.000.000) 2026-11-09 09:07:52 Finished transferring output files
+...
+005 (038.000.000) 2026-11-09 09:08:02 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:35, Sys 0 00:00:29  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:35, Sys 0 00:00:29  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	85292  -  Run Bytes Sent By Job
+	3664  -  Run Bytes Received By Job
+	85292  -  Total Bytes Sent By Job
+	3664  -  Total Bytes Received By Job
+	Partitionable Resources :      Usage  Request Allocated Assigned
+	   Cpus                 :       0.32        2         2 
+	   Disk (KB)            : 8897152    12582912  12582912 
+	   GPUs                 :                   1         1 "GPU-7841c211"
+	   Memory (MB)          :     137        8192      8192 
+	   TimeExecute (s)      :     213                       
+	   TimeSlotBusy (s)     :     215                       
+...

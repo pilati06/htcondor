@@ -1,0 +1,23 @@
+# Job 6b: Poetry + torch no slot Windows com Python 3.12
+executable   = poetry_test.bat
+requirements = (OpSys == "WINDOWS") && (HAS_PYTHON312 =?= True)
+
+request_cpus   = 2
+request_memory = 8GB
+# torch com CUDA baixa ~3 GB e ocupa ~6 GB instalado
+request_disk   = 12GB
+request_gpus   = 1
+
+# Carrega o perfil do usuario de slot (AppData, registro). Sem perfil,
+# algumas APIs de copia de arquivo do Windows falham com WinError -2147467259.
+load_profile   = True
+
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files    = pyproject.toml, teste_torch.py, mkvenv.py
+
+output = poetry_test.$(Cluster).$(Process).out
+error  = poetry_test.$(Cluster).$(Process).err
+log    = poetry_test.$(Cluster).log
+
+queue
