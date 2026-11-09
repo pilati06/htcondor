@@ -24,8 +24,8 @@ echo === Python ===
 
 rem Poetry em um venv proprio (evita o instalador oficial, que era o que falhava)
 echo === Instalando Poetry ===
-"%PY312%" -m venv "%WORK%\poetry-env" || exit /b 2
-"%WORK%\poetry-env\Scripts\python.exe" -m pip install --quiet --upgrade pip poetry || exit /b 3
+"%PY312%" -m venv "%WORK%\poetry-env" || (echo ERRO: criacao do venv falhou & exit /b 2)
+"%WORK%\poetry-env\Scripts\python.exe" -m pip install --upgrade pip poetry || (echo ERRO: pip install poetry falhou & exit /b 3)
 set "POETRY=%WORK%\poetry-env\Scripts\poetry.exe"
 "%POETRY%" --version || exit /b 4
 
